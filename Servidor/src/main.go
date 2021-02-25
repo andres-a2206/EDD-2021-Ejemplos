@@ -23,12 +23,27 @@ type Mensaje struct {
 	Edad   int    `json:Edad`
 }
 
+type Mensajito struct {
+	Fecha string `json:Fecha`
+	Texto string `json:Texto`
+}
+
+type MensajeDestino struct {
+	Origen  string      `json:Origen`
+	Destino string      `json:Destino`
+	Msg     []Mensajito `json:Msg`
+}
+
+type MensajeGlobal struct {
+	Mensajes []MensajeDestino `json:Mensajes`
+}
+
 func inicial(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Funcionan EDD")
 }
 
 func agregar(w http.ResponseWriter, r *http.Request) {
-	var ms Mensaje
+	var ms MensajeGlobal
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Error al insertar")
@@ -37,6 +52,7 @@ func agregar(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 	json.Unmarshal(reqBody, &ms)
 	json.NewEncoder(w).Encode(ms)
+	fmt.Println(ms.Mensajes[0].Destino)
 }
 func numero(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)

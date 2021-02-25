@@ -1,0 +1,40 @@
+{
+    "Mensajes":[
+        {
+            "Origen":"Marvin",
+            "Destino":"Yaiza",
+            "Msg":[
+                {
+                    "Fecha":"03-09-2022",
+                    "Texto":"Hola como estas?"
+                },
+                {
+                    "Fecha":"04-09-2022",
+                    "Texto":"Ya te llego el mensaje?"
+                },
+                {
+                    "Fecha":"05-09-2022",
+                    "Texto":"Te espero afuera"
+                }
+            ]
+        },
+        {
+            "Origen":"Yaiza",
+            "Destino":"Marvin",
+            "Msg":[
+                {
+                    "Fecha":"03-09-2022",
+                    "Texto":"Ya"
+                },
+                {
+                    "Fecha":"14-02-2020",
+                    "Texto":"Tengo Hambre"
+                },
+                {
+                    "Fecha":"05-09-2022",
+                    "Texto":"APEX"
+                }
+            ]
+        }
+    ]
+}
