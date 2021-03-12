@@ -1,0 +1,12 @@
+.ImportList {
+    background: #ffb347;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffcc33, #ffb347);
+    height: 100%;
+}
+
+.carga{
+    height: 100vh;
+}
